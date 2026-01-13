@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lihi Harary | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+</head>
+<body>
+
+    <div class="background-gradient">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+   <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container"> 
+            <div class="d-flex align-items-center gap-3">
+                <a class="navbar-brand border p-1 rounded-circle m-0" href="#">LH</a>
+                
+                <button id="lang-toggle" class="btn border-0 p-0 d-flex flex-column align-items-center justify-content-center" 
+                        style="color: var(--text-dark); background: transparent; min-width: 40px; height: auto;">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 2px;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    
+                    <span id="lang-text" style="font-size: 0.7rem; font-weight: 400; font-family: sans-serif; line-height: 1;">EN</span>
+                </button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home" data-lang="nav_home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-lang="nav_about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects-section" data-lang="nav_projects">PROJECTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-lang="nav_contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container hero-container-limit position-relative z-2">
+            <div class="row align-items-center justify-content-between gap-5">
+                <div class="col-lg-5 text-start">
+                    <h1 class="display-3 fw-bold tracking-wide text-dark-blue" data-lang="name_main">LIHI HARARY</h1>
+                    <h2 class="fw-light mb-4 text-uppercase text-gradient-main" style="letter-spacing: 3px;" data-lang="hero_subtitle">Design & Technology</h2>
+                    <p class="lead mb-5 hero-text" data-lang="hero_text">
+                        B.A. student in Learning Technologies at HIT, specializing in UX/UI design. <br>
+                        Skilled in user-centered design, wireframing, and prototyping with Figma.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-start">
+                        <a href="#projects-section" class="btn-glass" data-lang="btn_projects">Projects</a>
+                        <a href="#about" class="btn-glass" data-lang="btn_about">About Me</a>
+                        <a href="#contact" class="btn-glass btn-glass-primary" data-lang="btn_contact">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-flex justify-content-center align-items-center position-relative" style="height: 500px;">
+                    <div id="myCanvasContainer">
+                        <canvas width="500" height="500" id="myCanvas"><p>Canvas not supported</p></canvas>
+                    </div>
+                    <div id="tags" style="display: none;">
+                        <ul>
+                            <li><a href="#"><img src="images/figmaicon.png" width="60" height="60" alt="Figma"></a></li>
+                            <li><a href="#"><img src="images/pyton.png" width="60" height="60" alt="Python"></a></li>
+                            <li><a href="#"><img src="images/illustratoricon.png" width="60" height="60" alt="Illustrator"></a></li>
+                            <li><a href="#"><img src="images/photoshopicon.png" width="60" height="60" alt="Photoshop"></a></li>
+                            <li><a href="#"><img src="images/JScodeicon.png" width="60" height="60" alt="JS"></a></li>
+                            <li><a href="#"><img src="images/C-logo.png" width="60" height="60" alt="C#"></a></li>
+                            <li><a href="#"><img src="images/Articulate Storyline 360icon.jpg" width="60" height="60" alt="Storyline"></a></li>
+                            <li><a href="#"><img src="images/unityicon.png" width="60" height="60" alt="Unity"></a></li>
+                            <li><a href="#"><img src="images/chatgpticon.png" width="60" height="60" alt="AI"></a></li>
+                         <li><a href="#"><img src="images/figmaicon.png" width="60" height="60" alt="Figma"></a></li>
+                            <li><a href="#"><img src="images/pyton.png" width="60" height="60" alt="Python"></a></li>
+                            <li><a href="#"><img src="images/illustratoricon.png" width="60" height="60" alt="Illustrator"></a></li>
+                            <li><a href="#"><img src="images/photoshopicon.png" width="60" height="60" alt="Photoshop"></a></li>
+                            <li><a href="#"><img src="images/JScodeicon.png" width="60" height="60" alt="JS"></a></li>
+                            <li><a href="#"><img src="images/C-logo.png" width="60" height="60" alt="C#"></a></li>
+                            <li><a href="#"><img src="images/Articulate Storyline 360icon.jpg" width="60" height="60" alt="Storyline"></a></li>
+                            <li><a href="#"><img src="images/unityicon.png" width="60" height="60" alt="Unity"></a></li>
+                            <li><a href="#"><img src="images/chatgpticon.png" width="60" height="60" alt="AI"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down text-center w-100" style="position: absolute; bottom: 30px;">
+            <a href="#about" class="text-dark-blue"><i class="fas fa-chevron-down fa-2x animate-bounce"></i></a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-3 col-xl-3 d-flex align-items-stretch slide-from-left">
+                    <div class="glass-card h-100 text-start d-flex flex-column align-items-start justify-content-center py-4 w-100 px-4">
+                        <div class="profile-circle mb-3 align-self-center">LH</div> 
+                        <h3 class="fw-bold mb-1 text-dark-blue w-100 text-start" data-lang="card_name">Lihi Harary</h3>
+                        <p class="text-gradient-main small fw-bold letter-spacing-2 mb-4 text-start" data-lang="card_role">UX/UI DESIGN & DEV</p>
+                        <div class="mt-auto w-100 d-flex flex-column gap-2">
+                            <a href="images/LihiHarary_CV.pdf" download="LihiHarary_CV.pdf" class="btn-glass w-100 py-2 small">
+                                <i class="fas fa-file-download me-2"></i><span data-lang="btn_cv">Download CV</span>
+                            </a>
+                            <a href="#contact" class="btn-glass btn-glass-primary w-100 py-2 small" data-lang="btn_contact">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-xl-9 slide-from-right">
+                    <div class="glass-card h-100 py-4 px-3 px-lg-5 d-flex flex-column justify-content-center text-start">                     
+                        <div class="mb-4">
+                            <h4 class="fw-bold mb-2 text-dark-blue" data-lang="about_title">About Me</h4>
+                            <p class="text-muted fs-6 lh-base mb-0" data-lang="about_text">
+                                Third-year <strong>Instructional Technologies</strong> student at HIT, specializing in <strong>UX/UI design</strong> and <strong>web development</strong>. 
+                                Passionate about combining creativity with analytical thinking to craft clear, user-centered digital experiences.
+                            </p>
+                        </div>
+                        <h5 class="text-gradient-main mb-3 d-flex align-items-center gap-2 small fw-bold text-uppercase">
+                            <i class="fas fa-layer-group"></i> <span data-lang="core_competencies">Core Competencies</span>
+                        </h5>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="competency-card glass-inner py-3 text-start px-3">
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-pen-nib"></i></div>
+                                    <h6 class="fw-bold mb-1" data-lang="comp_ux">UX/UI Design</h6>
+                                    <p class="text-muted small" data-lang="desc_ux">Wireframing, prototyping, and designing intuitive interfaces.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="competency-card glass-inner py-3 text-start px-3">
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-gamepad"></i></div>
+                                    <h6 class="fw-bold mb-1" data-lang="comp_game">Game Dev</h6>
+                                    <p class="text-muted small" data-lang="desc_game">Interactive experiences in Unity & C#.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="competency-card glass-inner py-3 text-start px-3">
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-code"></i></div>
+                                    <h6 class="fw-bold mb-1" data-lang="comp_web">Web Dev</h6>
+                                    <p class="text-muted small" data-lang="desc_web">Responsive websites using HTML, CSS, JS.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="competency-card glass-inner py-3 text-start px-3">
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-graduation-cap"></i></div>
+                                    <h6 class="fw-bold mb-1" data-lang="comp_edu">E-Learning</h6>
+                                    <p class="text-muted small" data-lang="desc_edu">Instructional design with Storyline & Rise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="competency-card glass-inner py-3 d-flex align-items-center justify-content-between px-4 text-start">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="competency-icon m-0"><i class="fas fa-university"></i></div>
+                                        <div>
+                                            <h6 class="fw-bold mb-0" data-lang="degree_title">B.A. in Instructional Technologies</h6>
+                                            <small class="text-secondary" data-lang="degree_inst">Holon Institute of Technology (HIT)</small>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-white text-dark px-3 py-2 rounded-pill small shadow-sm" data-lang="degree_year">2023 - Present</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects-section" class="projects-section py-5 position-relative overflow-hidden">
+        <div class="container position-relative z-2 mb-0.5 reveal-section">
+            <div class="projects-header text-start">
+                <h2 class="projects-title text-dark-blue"><span data-lang="proj_title_sel">Selected</span> <span class="text-gradient-main" data-lang="proj_title_proj">Projects</span></h2>
+                <div class="title-separator ms-0"></div> 
+                <p class="projects-subtitle text-muted" data-lang="proj_subtitle">A selection of interactive, design-driven and technology-based projects</p>
+            </div>
+        </div>
+        <div class="container position-relative z-2">
+            <div id="projects-grid" class="row justify-content-start g-4 g-lg-5 reveal-grid">
+                
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('magic-match')">
+                    <div class="glass-square-card">
+                        <div class="card-inner-content">
+                            <div class="project-circle-img" style="background-image: url('images/magicandmatchbg.png');"><div class="circle-overlay"><img src="images/magicandmatch.png" alt="Logo" class="img-fluid mb-2" style="max-width: 50px;"><h6 class="fw-bold m-0 text-uppercase" data-lang="mm_card_title">Magic & Match</h6></div></div>
+                            <div class="mt-3 text-start"><span class="project-number">01</span><span class="project-cat d-block small text-muted" data-lang="cat_gamedev">Game Dev</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('ruach-gabit')">
+                    <div class="glass-square-card">
+                        <div class="card-inner-content">
+                            <div class="project-circle-img" style="background-image: url('images/logo.png');"><div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase" data-lang="rg_card_title">Ruach Gabit</h6></div></div>
+                            <div class="mt-3 text-start"><span class="project-number">02</span><span class="project-cat d-block small text-muted" data-lang="cat_webdev">Web Dev</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('mushbot')">
+                    <div class="glass-square-card">
+                        <div class="card-inner-content">
+                            <div class="project-circle-img" style="background-image: url('images/mushbotBG.png');"><div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase" data-lang="mb_card_title">MushBot</h6></div></div>
+                            <div class="mt-3 text-start"><span class="project-number">03</span><span class="project-cat d-block small text-muted" data-lang="cat_aitool">AI Tool</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('elearning')">
+                    <div class="glass-square-card">
+                        <div class="card-inner-content">
+                            <div class="project-circle-img" style="background-image: url('images/ELEARNINGBG.png');"><div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase" data-lang="el_card_title">Growing Plants</h6></div></div>
+                            <div class="mt-3 text-start"><span class="project-number">04</span><span class="project-cat d-block small text-muted" data-lang="cat_elearning">E-Learning</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('oreo')">
+                    <div class="glass-square-card">
+                        <div class="card-inner-content">
+                            <div class="project-circle-img" style="background-image: url('images/aliceinworderlandBG.png');"><div class="circle-overlay"><img src="images/aliceinworderlandLOGO.png" alt="Logo" class="img-fluid mb-2" style="max-width: 50px;"><h6 class="fw-bold m-0 text-uppercase" data-lang="or_card_title">Packaging</h6></div></div>
+                            <div class="mt-3 text-start"><span class="project-number">05</span><span class="project-cat d-block small text-muted" data-lang="cat_branding">Branding</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('ai-platform')">
+                    <div class="glass-square-card">
+                        <div class="card-inner-content">
+                            <div class="project-circle-img" style="background: linear-gradient(135deg, #e0e5ec, #ffffff);"><div class="circle-overlay d-flex align-items-center justify-content-center"><i class="fas fa-network-wired hover-hide" style="font-size: 1.5rem; color: #a3b1c6;"></i><h6 class="fw-bold m-0 text-uppercase hover-show" style="display: none; white-space: nowrap; font-size: 0.6rem; letter-spacing: 1px; color: #555;" data-lang="ai_card_title">AI Platform</h6></div></div>
+                            <div class="mt-3 text-start"><span class="project-number">06</span><span class="project-cat d-block small text-muted" data-lang="cat_inprogress">In-Progress</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="project-details-container" class="project-details-overlay d-none">
+        
+        <div id="magic-match-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
+            <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
+            <div class="row g-0 h-100">
+                <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
+                    <div class="d-flex align-items-center gap-3 mb-3"><span class="tech-tag" data-lang="tag_gamedev">Game Development</span><span class="text-muted"><i class="far fa-calendar-alt"></i> 2024</span></div>
+                    <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="mm_title">Magic & Match</h2>
+                    <p class="text-gradient-main mb-4 small fw-bold" data-lang="mm_subtitle">Developed in Unity & C# | Custom Game Generator</p>
+                    <div class="mb-4 description-text flex-grow-1">
+                        <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
+                        <p class="mt-2" data-lang="mm_desc1">An interactive 2D educational matching game, fully designed and programmed in Unity with C#.</p>
+                        <p data-lang="mm_desc2">The project features a custom-built generator that lets users create and personalize their own games.</p>
+                        <p data-lang="mm_desc3">All game logic, scene flow, and animations were developed through C# scripts.</p>
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="mm_header_goal">Goal & Uniqueness</h5>
+                        <p class="mt-2" data-lang="mm_desc4">The game blends learning with interactivity, as players match enchanted clouds to lift a floating house back into the sky.</p>
+                    </div>
+                    <div class="mb-4"><a href="https://www.figma.com/proto/HCdMpr9q2Zk4ZA4VC6ApWR/%D7%90%D7%A4%D7%99%D7%95%D7%9F-Magic---Match" target="_blank" class="text-muted text-decoration-none"><i class="fab fa-figma me-2"></i><span data-lang="link_figma">Link for Figma Wireframes</span></a></div>
+                    <div class="mb-4 tech-stack"><span class="tech-tag">C#</span><span class="tech-tag">Unity</span><span class="tech-tag">Figma</span><span class="tech-tag">Illustrator</span></div>
+                    <div class="mt-auto"><a href="https://triangle.telem-hit.net/2025/MagicMatch_LihiRazKoral/Game" target="_blank" class="btn btn-glass-primary w-100"><span data-lang="btn_view_live">View Live Project</span> <i class="fas fa-arrow-right ms-2"></i></a></div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
+                     <div class="h-100 w-100 d-flex align-items-center justify-content-center">
+                        <div id="magicMatchGallery" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="false">
+                            <div class="carousel-indicators"><button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="0" class="active"></button><button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="1"></button><button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="2"></button><button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="3"></button></div>
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_1">Custom Game Generator</h5></div><video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;"><source src="images/meholel.mp4" type="video/mp4"></video></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_2">Opening Cinematic</h5></div><video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;"><source src="images/OpeningCinematicc.mp4" type="video/mp4"></video></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_3">Core Gameplay</h5></div><video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;"><source src="images/thegame.mp4" type="video/mp4"></video></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_4">Ending & Feedback</h5></div><video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;"><source src="images/Endinganimationn.mp4" type="video/mp4"></video></div></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#magicMatchGallery" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#magicMatchGallery" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ruach-gabit-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
+            <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
+            <div class="row g-0 h-100">
+                <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
+                    <div class="d-flex align-items-center gap-3 mb-3"><span class="tech-tag" data-lang="tag_webdev">Web Development</span><span class="text-muted"><i class="far fa-calendar-alt"></i> 2024</span></div>
+                    <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="rg_title">Ruach Gabit</h2>
+                    <p class="text-gradient-main mb-4 small fw-bold" data-lang="rg_subtitle">Social-Impact Website</p>
+                    <div class="mb-4 description-text flex-grow-1">
+                        <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
+                        <p class="mt-2" data-lang="rg_desc1">“Ruach Gabit” – A Social-Impact Website Supporting Independent Businesses During Iron Swords War.</p>
+                        <p data-lang="rg_desc2">The focus was on creating a socially driven website that promotes and supports independent business owners affected during the war, providing them with an online platform to increase visibility and connect with new customers.</p>
+                        <p data-lang="rg_desc3">The website was built entirely with HTML, CSS, and JavaScript, combining responsive web design with interactive front-end functionality.</p>
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="rg_header_feat">Interactive Features</h5>
+                        <p class="mt-2" data-lang="rg_desc4">Includes interactive registration form that allows business owners to sign up for the platform — dynamically adapting to user input through JavaScript event-driven logic.</p>
+                        <a href="https://appdani.github.io/volForm/interactive-form/volForm.html" target="_blank" class="text-muted small"><i class="fas fa-file-signature me-1"></i> <span data-lang="link_form">View Interactive Form</span></a>
+                    </div>
+                    <div class="mb-4 tech-stack"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Illustrator</span></div>
+                    <div class="mt-auto"><a href="https://ruach-gabit-project.onrender.com/" target="_blank" class="btn btn-glass-primary w-100"><span data-lang="btn_view_live">View Live Project</span> <i class="fas fa-arrow-right ms-2"></i></a></div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
+                    <div class="h-100 w-100 d-flex align-items-center justify-content-center p-4">
+                        <video autoplay muted loop playsinline class="w-100 shadow-lg" style="border-radius: 15px;"><source src="images/ruaj_gbit.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mushbot-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
+            <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
+            <div class="row g-0 h-100">
+                <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
+                    <div class="d-flex align-items-center gap-3 mb-3"><span class="tech-tag" data-lang="tag_aidev">AI Development</span><span class="text-muted"><i class="far fa-calendar-alt"></i> 2024</span></div>
+                    <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="mb_title">MushBot</h2>
+                    <p class="text-gradient-main mb-4 small fw-bold" data-lang="mb_subtitle">AI-Powered Mushroom Identification</p>
+                    <div class="mb-4 description-text flex-grow-1">
+                        <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
+                        <p class="mt-2" data-lang="mb_desc1">Mushbot bridges the gap between nature and technology to help travelers identify mushrooms safely.</p>
+                        <p data-lang="mb_desc2">Real-time identification: Integrated Kindwise API for high-accuracy botanical identification.</p>
+                        <p data-lang="mb_desc3">Safety first: Smart logic that provides instant green/red safety alerts to prevent accidents.</p>
+                        <p data-lang="mb_desc4">Rich data: Local content retrieval via Wikipedia API.</p>
+                        <p data-lang="mb_desc5">Dynamic UX: Automatic recipe generator for edible mushrooms.</p>
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="header_tools">Tools & Technologies</h5>
+                        <p class="mt-2" data-lang="mb_desc6">Built entirely with HTML, CSS, and JavaScript. <br> integrated multiple AI and Web tools including Kindwise API, ml5.js, Gemini, and Suno AI.</p>
+                    </div>
+                    <div class="mb-4 tech-stack"><span class="tech-tag">JavaScript</span><span class="tech-tag">Kindwise API</span><span class="tech-tag">ml5.js</span><span class="tech-tag">Gen AI</span></div>
+                    <div class="mt-auto"><a href="https://mushbot.onrender.com/" target="_blank" class="btn btn-glass-primary w-100"><span data-lang="btn_view_live">View Live Project</span> <i class="fas fa-arrow-right ms-2"></i></a></div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
+                    <div class="h-100 w-100 d-flex align-items-center justify-content-center p-4">
+                        <video autoplay muted loop playsinline class="w-100 shadow-lg" style="border-radius: 15px;"><source src="images/mushbotvideoo.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="elearning-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
+            <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
+            <div class="row g-0 h-100">
+                <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
+                    <div class="d-flex align-items-center gap-3 mb-3"><span class="tech-tag" data-lang="tag_instdesign">Instructional Design</span><span class="text-muted"><i class="far fa-calendar-alt"></i> 2025</span></div>
+                    <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="el_title">Growing & Caring for Plants</h2>
+                    <p class="text-gradient-main mb-4 small fw-bold" data-lang="el_subtitle">Interactive Module for Children</p>
+                    <div class="mb-4 description-text flex-grow-1">
+                        <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
+                        <p class="mt-2" data-lang="el_desc1">This interactive e-learning designed specifically for young children to introduce the three essential conditions for plant growth: soil, water, and sunlight.</p>
+                        <p data-lang="el_desc2">The learning experience is intuitive and exploratory, allowing children to actively engage with the content rather than passively consume it. Through colorful animations and simple feedback mechanics, learners reveal each condition and advance to a knowledge-check quiz.</p>
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="header_design_tech">Design & Technology</h5>
+                        <p class="mt-2" data-lang="el_desc3">All visual elements—illustrations, icons, and layout—were fully created in <strong>Adobe Illustrator</strong>, using a clean, playful, and age-appropriate vector style.</p>
+                        <p data-lang="el_desc4">The module was built in <strong>Articulate Storyline 360</strong>, combining instructional design principles with custom visual storytelling.</p>
+                    </div>
+                    <div class="mb-4 tech-stack"><span class="tech-tag">Articulate Storyline 360</span><span class="tech-tag">Adobe Illustrator</span><span class="tech-tag">Instructional Design</span></div>
+                    <div class="mt-auto"><a href="https://360.articulate.com/review/content/fbfcc041-d87a-441d-8987-96591393ee15/review" target="_blank" class="btn btn-glass-primary w-100"><span data-lang="btn_view_live">View Live Project</span> <i class="fas fa-arrow-right ms-2"></i></a></div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
+                     <div class="h-100 w-100 d-flex align-items-center justify-content-center">
+                        <div id="elearningGallery" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="false">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="0" class="active"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="1"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="2"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="3"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="4"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="5"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="6"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="7"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="8"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="9"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="10"></button><button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="11"></button>
+                            </div>
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING1.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 1"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING2.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 2"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING3.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 3"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING4.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 4"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING5.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 5"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING6.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 6"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING7.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 7"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING8.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 8"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING9.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 9"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING10.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 10"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING11.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 11"></div></div>
+                                <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="images/ELEARNING12.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 12"></div></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#elearningGallery" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#elearningGallery" data-bs-slide-to="next"><span class="carousel-control-next-icon"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="oreo-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
+            <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
+            <div class="row g-0 h-100">
+                <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
+                    <div class="d-flex align-items-center gap-3 mb-3"><span class="tech-tag" data-lang="tag_branding">Brand Identity</span><span class="text-muted"><i class="far fa-calendar-alt"></i> 2025</span></div>
+                    <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="or_title">Oreo Rebranding Project</h2>
+                    <p class="text-gradient-main mb-4 small fw-bold" data-lang="or_subtitle">Visual Identity & Packaging Design</p>
+                    <div class="mb-4 description-text flex-grow-1">
+                        <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
+                        <p class="mt-2" data-lang="or_desc1">This project reimagines the classic Oreo cookie through a creative rebranding process inspired by storytelling and user experience principles.</p>
+                        <p data-lang="or_desc2">The goal was to design a fresh visual identity that preserves Oreo’s iconic, playful character while giving it a more modern, cohesive, and emotionally engaging look.</p>
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="header_design_process">Design Process</h5>
+                        <p class="mt-2" data-lang="or_desc3">The entire concept was developed from scratch — from mood boards and color exploration to vector illustrations, composition, and packaging layout.</p>
+                        <p data-lang="or_desc4">All visual elements were created in Adobe Illustrator, following brand and print standards for real-world packaging production, including front, back, and side panels with nutritional information and barcodes.</p>
+                        <p data-lang="or_desc5">The project demonstrates a strong sense of visual strategy, brand storytelling, and attention to detail, emphasizing how design can connect emotion, nostalgia, and product experience.</p>
+                    </div>
+                    <div class="mb-4 tech-stack"><span class="tech-tag">Adobe Illustrator</span><span class="tech-tag">Branding</span><span class="tech-tag">Packaging Design</span></div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block position-relative image-side overflow-auto h-100 bg-glass-dark">
+                    <div class="w-100 d-flex justify-content-center p-4">
+                        <img src="images/aliceinworderland.png" class="shadow-lg rounded img-fluid" style="width: 100%; height: auto;" alt="Oreo Rebranding Vertical">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ai-platform-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
+            <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
+            <div class="row g-0 h-100">
+                <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
+                    <div class="d-flex align-items-center gap-3 mb-3"><span class="tech-tag" data-lang="tag_inprogress">In-Progress, AI Systems Project</span><span class="text-muted"><i class="fas fa-spinner fa-spin me-1"></i> In Progress</span></div>
+                    <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="ai_title">AI-Based Instructional Design Platform</h2>
+                    <p class="text-gradient-main mb-4 small fw-bold" data-lang="ai_subtitle">Multi-Agent System & Automation</p>
+                    <div class="mb-4 description-text flex-grow-1">
+                        <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
+                        <p class="mt-2" data-lang="ai_desc1">Designing a multi-agent AI system that supports and automates instructional design processes based on the <strong>ADDIE model</strong> and <strong>Human-in-the-Loop</strong> principles.</p>
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="header_dev_focus">Development Focus</h5>
+                        <ul class="list-unstyled mt-2 small text-secondary">
+                            <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="ai_list1">Defining system architecture and agent orchestration.</span></li>
+                            <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="ai_list2">Creating end-to-end user flows for AI-human collaboration.</span></li>
+                            <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="ai_list3">User research to optimize interaction interaction.</span></li>
+                        </ul>
+                    </div>
+                    <div class="mb-4 tech-stack"><span class="tech-tag">AI Automation Tools</span><span class="tech-tag">System Architecture</span><span class="tech-tag">Agent Orchestration</span><span class="tech-tag">UX Research</span></div>
+                    <div class="mt-auto"><button class="btn btn-glass-primary w-100 disabled" style="opacity: 0.7; cursor: not-allowed;"><i class="fas fa-hammer me-2"></i> <span data-lang="btn_progress">Currently in Development</span></button></div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
+                     <div class="h-100 w-100 d-flex flex-column align-items-center justify-content-center p-5 text-center">
+                      <div class="mb-4 p-4 rounded-circle shadow-sm" style="background: #e0e5ec;"><i class="fas fa-project-diagram fa-3x" style="color: #a3b1c6;"></i></div>
+                      <h4 class="fw-bold text-muted" data-lang="ai_arch_title">System Architecture</h4>
+                      <p class="small text-secondary px-5" data-lang="ai_arch_desc">Visuals and diagrams for the multi-agent orchestration and user flows are currently being designed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="editorial-contact-section">
+        <div class="big-contact-bg-text reveal-slide-right" data-lang="contact_bg">Contact</div>
+
+        <div class="container contact-content position-relative z-2">
+            <div class="row justify-content-between">
+                
+                <div class="col-lg-4 mb-5 mb-lg-0 d-flex flex-column justify-content-between fade-up">
+                    <div class="mb-5">
+                        <div class="d-flex flex-column align-items-start gap-3">
+                            <button class="pill-btn active">
+                                <span class="dot"></span> <span data-lang="contact_ready">Ready to start something new?</span>
+                            </button>
+                            <button class="pill-btn">
+                                <span class="dot empty"></span> <span data-lang="contact_chat">Let's Chat</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-details mt-auto">
+                        <div class="contact-row d-flex align-items-start mb-4">
+                            <div class="icon-box me-3"><i class="fas fa-envelope fa-lg"></i></div>
+                            <div>
+                                <h6 class="detail-label" data-lang="label_email">Email</h6>
+                                <a href="mailto:lihiharary9@gmail.com" class="detail-value">lihiharary9@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-row d-flex align-items-start mb-4">
+                            <div class="icon-box me-3"><i class="fab fa-linkedin-in fa-lg"></i></div>
+                            <div>
+                                <h6 class="detail-label" data-lang="label_social">Social</h6>
+                                <a href="https://www.linkedin.com/in/lihiharary/" target="_blank" class="detail-value">LinkedIn Profile ↗</a>
+                            </div>
+                        </div>
+                        <div class="contact-row d-flex align-items-start">
+                            <div class="icon-box me-3"><i class="fas fa-map-marker-alt fa-lg"></i></div>
+                            <div>
+                                <h6 class="detail-label" data-lang="label_loc">Location</h6>
+                                <p class="detail-value m-0" data-lang="val_loc">Ramat Gan, Israel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 fade-up delay-200">
+                    <form class="editorial-form">
+                        <div class="row mb-5">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="input-group-minimal">
+                                    <input type="text" class="input-minimal" placeholder=" " required>
+                                    <label data-lang="form_name">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group-minimal">
+                                    <input type="text" class="input-minimal" placeholder=" ">
+                                    <label data-lang="form_comp">Company (Optional)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="input-group-minimal">
+                                    <input type="email" class="input-minimal" placeholder=" " required>
+                                    <label data-lang="form_email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group-minimal">
+                                    <input type="tel" class="input-minimal" placeholder=" ">
+                                    <label data-lang="form_phone">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <div class="input-group-minimal">
+                                    <input type="text" class="input-minimal" placeholder=" ">
+                                    <label data-lang="form_msg">Have a project in mind?  I'd love to hear about it</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-5">
+                            <div class="col-md-6 mb-3 mb-md-0"></div>
+                            <div class="col-md-6 text-md-end">
+                                <button type="submit" class="pill-btn black-fill">
+                                    <span class="dot white"></span> <span data-lang="form_send">Send Message</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+<style>
+    /* ==================================================
+       GLOBAL FIXES FOR MOBILE (DESKTOP STYLE)
+       ================================================== */
+    
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 1. Force Left Alignment and Column Order on Mobile */
+    @media (max-width: 991px) {
+        body, section, header, .container, .row, .col-lg-5, .col-lg-6, .col-lg-3, .col-lg-9,
+        h1, h2, h3, h4, h5, p, .projects-header, .glass-card, .profile-circle {
+            text-align: left !important;
+            align-items: flex-start !important;
+        }
+        .row { flex-direction: column !important; }
+        .d-flex:not(.justify-content-center):not(.flex-column) { justify-content: flex-start !important; }
+        .glass-card { align-items: flex-start !important; text-align: left !important; }
+        .project-card-wrapper .glass-square-card { align-items: center !important; text-align: left !important; }
+        .title-separator { margin: 20px 0 !important; }
+        .hero-section { padding-top: 100px; }
+        .display-3 { font-size: 3rem; }
+        .d-flex.gap-3 { justify-content: flex-start !important; }
+    }
+
+    #myCanvasContainer {
+        width: 100%; max-width: 500px; margin: 0 auto;
+        display: flex; justify-content: center;
+    }
+    #myCanvas { width: 100% !important; height: auto !important; }
+
+    @media (max-width: 768px) {
+        .glass-card, .content-side { padding: 1.5rem !important; }
+        .display-3 { font-size: 2.5rem; }
+        .hero-section .col-lg-5:last-child { height: auto !important; margin-top: 20px; }
+    }
+
+    .glass-square-card:hover .hover-hide { display: none !important; }
+    .glass-square-card:hover .hover-show { display: block !important; }
+    
+    #project-details-container {
+        position: fixed !important; top: 0 !important; left: 0 !important;
+        width: 100vw !important; height: 100vh !important; z-index: 9999 !important;
+    }
+
+    /* ==================================================
+       RTL & LANGUAGE STYLES
+       ================================================== */
+    body.rtl {
+        direction: rtl;
+        text-align: right;
+        font-family: 'Rubik', sans-serif; /* פונט נעים לקריאה בעברית */
+    }
+
+    body.rtl .text-start {
+        text-align: right !important;
+    }
+
+    /* --- TYPOGRAPHY FIXES FOR HEBREW (BIGGER FONTS) --- */
+    body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5 {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700 !important; 
+        letter-spacing: normal !important;
+    }
+    
+    body.rtl .display-3 {
+        font-size: 4rem !important; 
+    }
+    body.rtl .display-6 {
+        font-size: 3.2rem !important; 
+    }
+    body.rtl h2.projects-title {
+        font-size: 3.5rem !important;
+    }
+
+    /* Override mobile left-align in RTL */
+    @media (max-width: 991px) {
+        body.rtl, body.rtl section, body.rtl header, body.rtl .container, 
+        body.rtl .row, body.rtl .col-lg-5, body.rtl .col-lg-6, 
+        body.rtl .col-lg-3, body.rtl .col-lg-9,
+        body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5, 
+        body.rtl p, body.rtl .projects-header, body.rtl .glass-card {
+            text-align: right !important;
+            align-items: flex-start !important;
+        }
+        body.rtl .d-flex:not(.justify-content-center):not(.flex-column) {
+            justify-content: flex-start !important; 
+        }
+    }
+
+    /* Direction fixes */
+    body.rtl .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+    body.rtl .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+    body.rtl .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+    
+    body.rtl .btn-glass i, body.rtl .pill-btn i { margin-left: 8px; margin-right: 0; }
+    
+    /* --- התיקון לכותרת "דברו איתי" שנחתכה --- */
+    body.rtl .big-contact-bg-text {
+        left: auto;
+        right: 0; /* במקום -5%, שמנו 0 כדי שלא יצא מהמסך */
+        padding-right: 2%; /* מרווח ביטחון קטן מהצד */
+        transform: translateX(100px);
+    }
+    body.rtl .big-contact-bg-text.active { 
+        transform: translateX(0); 
+    }
+    
+    body.rtl .input-group-minimal label {
+        left: auto; right: 0; transform-origin: right top;
+    }
+</style>
+
+<script>
+    // --- LANGUAGE TOGGLE LOGIC ---
+    const translations = {
+        en: {
+            nav_home: "HOME", nav_about: "ABOUT", nav_projects: "PROJECTS", nav_contact: "CONTACT",
+            name_main: "LIHI HARARY", hero_subtitle: "Design & Technology",
+            hero_text: "B.A. student in Learning Technologies at HIT, specializing in UX/UI design. <br> Skilled in user-centered design, wireframing, and prototyping with Figma.",
+            btn_projects: "Projects", btn_about: "About Me", btn_contact: "Contact Me",
+            card_name: "Lihi Harary", card_role: "UX/UI DESIGN & DEV", btn_cv: "Download CV",
+            about_title: "About Me",
+            about_text: "Third-year <strong>Instructional Technologies</strong> student at HIT, specializing in <strong>UX/UI design</strong> and <strong>web development</strong>. Passionate about combining creativity with analytical thinking to craft clear, user-centered digital experiences.",
+            core_competencies: "Core Competencies",
+            comp_ux: "UX/UI Design", desc_ux: "Wireframing, prototyping, and designing intuitive interfaces.",
+            comp_game: "Game Dev", desc_game: "Interactive experiences in Unity & C#.",
+            comp_web: "Web Dev", desc_web: "Responsive websites using HTML, CSS, JS.",
+            comp_edu: "E-Learning", desc_edu: "Instructional design with Storyline & Rise.",
+            degree_title: "B.A. in Instructional Technologies", degree_inst: "Holon Institute of Technology (HIT)", degree_year: "2023 - Present",
+            proj_title_sel: "Selected", proj_title_proj: "Projects", proj_subtitle: "A selection of interactive, design-driven and technology-based projects",
+            contact_bg: "Contact", contact_ready: "Ready to start something new?", contact_chat: "Let's Chat",
+            label_email: "Email", label_social: "Social", label_loc: "Location", val_loc: "Ramat Gan, Israel",
+            form_name: "Name", form_comp: "Company (Optional)", form_email: "Email", form_phone: "Phone", form_msg: "Have a project in mind?  I'd love to hear about it", form_send: "Send Message",
+            
+            // Project Cards (Grid)
+            cat_gamedev: "Game Dev", cat_webdev: "Web Dev", cat_aitool: "AI Tool", cat_elearning: "E-Learning", cat_branding: "Branding", cat_inprogress: "In-Progress",
+            mm_card_title: "Magic & Match", rg_card_title: "Ruach Gabit", mb_card_title: "MushBot", el_card_title: "Growing Plants", or_card_title: "Packaging", ai_card_title: "AI Platform",
+
+            // Magic Match Details
+            tag_gamedev: "Game Development", mm_title: "Magic & Match", mm_subtitle: "Developed in Unity & C# | Custom Game Generator",
+            header_about_proj: "About the Project", header_goal: "Goal & Uniqueness",
+            mm_desc1: "An interactive 2D educational matching game, fully designed and programmed in Unity with C#.",
+            mm_desc2: "The project features a custom-built generator that lets users create and personalize their own games.",
+            mm_desc3: "All game logic, scene flow, and animations were developed through C# scripts.",
+            mm_header_goal: "Goal & Uniqueness",
+            mm_desc4: "The game blends learning with interactivity, as players match enchanted clouds to lift a floating house back into the sky.",
+            link_figma: "Link for Figma Wireframes", btn_view_live: "View Live Project",
+            mm_gal_1: "Custom Game Generator", mm_gal_2: "Open animation", mm_gal_3: "Core Gameplay", mm_gal_4: "Ending & Feedback",
+
+            // Ruach Gabit Details
+            tag_webdev: "Web Development", rg_title: "Ruach Gabit", rg_subtitle: "Social-Impact Website",
+            rg_desc1: "“Ruach Gabit” – A Social-Impact Website Supporting Independent Businesses During Iron Swords War.",
+            rg_desc2: "The focus was on creating a socially driven website that promotes and supports independent business owners affected during the war, providing them with an online platform to increase visibility and connect with new customers.",
+            rg_desc3: "The website was built entirely with HTML, CSS, and JavaScript, combining responsive web design with interactive front-end functionality.",
+            rg_header_feat: "Interactive Features",
+            rg_desc4: "Includes interactive registration form that allows business owners to sign up for the platform — dynamically adapting to user input through JavaScript event-driven logic.",
+            link_form: "View Interactive Form",
+
+            // Mushbot Details
+            tag_aidev: "AI Development", mb_title: "MushBot", mb_subtitle: "AI-Powered Mushroom Identification",
+            mb_desc1: "Mushbot bridges the gap between nature and technology to help travelers identify mushrooms safely.",
+            mb_desc2: "Real-time identification: Integrated Kindwise API for high-accuracy botanical identification.",
+            mb_desc3: "Safety first: Smart logic that provides instant green/red safety alerts to prevent accidents.",
+            mb_desc4: "Rich data: Local content retrieval via Wikipedia API.",
+            mb_desc5: "Dynamic UX: Automatic recipe generator for edible mushrooms.",
+            header_tools: "Tools & Technologies",
+            mb_desc6: "Built entirely with HTML, CSS, and JavaScript. <br> integrated multiple AI and Web tools including Kindwise API, ml5.js, Gemini, and Suno AI.",
+
+            // E-Learning Details
+            tag_instdesign: "Instructional Design", el_title: "Growing & Caring for Plants", el_subtitle: "Interactive Module for Children",
+            el_desc1: "This interactive e-learning designed specifically for young children to introduce the three essential conditions for plant growth: soil, water, and sunlight.",
+            el_desc2: "The learning experience is intuitive and exploratory, allowing children to actively engage with the content rather than passively consume it. Through colorful animations and simple feedback mechanics, learners reveal each condition and advance to a knowledge-check quiz.",
+            header_design_tech: "Design & Technology",
+            el_desc3: "All visual elements—illustrations, icons, and layout—were fully created in <strong>Adobe Illustrator</strong>, using a clean, playful, and age-appropriate vector style.",
+            el_desc4: "The module was built in <strong>Articulate Storyline 360</strong>, combining instructional design principles with custom visual storytelling.",
+
+            // Oreo Details
+            tag_branding: "Brand Identity", or_title: "Oreo Rebranding Project", or_subtitle: "Visual Identity & Packaging Design",
+            or_desc1: "This project reimagines the classic Oreo cookie through a creative rebranding process inspired by storytelling and user experience principles.",
+            or_desc2: "The goal was to design a fresh visual identity that preserves Oreo’s iconic, playful character while giving it a more modern, cohesive, and emotionally engaging look.",
+            header_design_process: "Design Process",
+            or_desc3: "The entire concept was developed from scratch — from mood boards and color exploration to vector illustrations, composition, and packaging layout.",
+            or_desc4: "All visual elements were created in Adobe Illustrator, following brand and print standards for real-world packaging production, including front, back, and side panels with nutritional information and barcodes.",
+            or_desc5: "The project demonstrates a strong sense of visual strategy, brand storytelling, and attention to detail, emphasizing how design can connect emotion, nostalgia, and product experience.",
+
+            // AI Platform Details
+            tag_inprogress: "In-Progress, AI Systems Project", ai_title: "AI-Based Instructional Design Platform", ai_subtitle: "Multi-Agent System & Automation",
+            ai_desc1: "Designing a multi-agent AI system that supports and automates instructional design processes based on the <strong>ADDIE model</strong> and <strong>Human-in-the-Loop</strong> principles.",
+            header_dev_focus: "Development Focus",
+            ai_list1: "Defining system architecture and agent orchestration.",
+            ai_list2: "Creating end-to-end user flows for AI-human collaboration.",
+            ai_list3: "User research to optimize interaction interaction.",
+            btn_progress: "Currently in Development",
+            ai_arch_title: "System Architecture", ai_arch_desc: "Visuals and diagrams for the multi-agent orchestration and user flows are currently being designed."
+        },
+        he: {
+            nav_home: "ראשי", nav_about: "אודות", nav_projects: "פרויקטים", nav_contact: "צור קשר",
+            name_main: "ליהי הררי", hero_subtitle: "עיצוב וטכנולוגיה",
+            hero_text: "סטודנטית שנה ג' לטכנולוגיות למידה ב-HIT, מתמחה בעיצוב UX/UI.<br> בעלת מיומנויות בעיצוב ממוקד משתמש, אפיון ויצירת פרוטוטייפים ב-Figma.",
+            btn_projects: "לפרויקטים", btn_about: "קצת עליי", btn_contact: "צרו קשר",
+            card_name: "ליהי הררי", card_role: "עיצוב ופיתוח UX/UI", btn_cv: "הורדת קו\"ח",
+            about_title: "קצת עליי",
+            about_text: "סטודנטית שנה ג' ל<strong>טכנולוגיות למידה</strong> ב-HIT, מתמחה ב-<strong>UX/UI</strong> ופיתוח WEB. בעלת תשוקה לשילוב יצירתיות עם חשיבה אנליטית ליצירת חוויות דיגיטליות ברורות וממוקדות משתמש.",
+            core_competencies: "תחומי התמחות",
+            comp_ux: "עיצוב UX/UI", desc_ux: "אפיון, יצירת פרוטוטייפים ועיצוב ממשקים אינטואיטיביים.",
+            comp_game: "פיתוח משחקים", desc_game: "חוויות אינטראקטיביות ב-Unity ו-C#.",
+            comp_web: "פיתוח Web", desc_web: "אתרים רספונסיביים באמצעות HTML, CSS, JS.",
+            comp_edu: "פיתוח למידה", desc_edu: "עיצוב והדרכה באמצעות Storyline ו-Rise.",
+            degree_title: "תואר ראשון בטכנולוגיות למידה", degree_inst: "המכון הטכנולוגי חולון (HIT)", degree_year: "2023 - היום",
+            proj_title_sel: "פרויקטים", proj_title_proj: "נבחרים", proj_subtitle: "מבחר פרויקטים אינטראקטיביים המשלבים עיצוב וטכנולוגיה",
+            contact_bg: " יצירת קשר", contact_ready: "מוכנים להתחיל משהו חדש?", contact_chat: "בואו נדבר",
+            label_email: "אימייל", label_social: "רשתות", label_loc: "מיקום", val_loc: "רמת גן, ישראל",
+            form_name: "שם מלא", form_comp: "חברה (אופציונלי)", form_email: "אימייל", form_phone: "טלפון", form_msg: "יש לכם פרויקט בראש? אשמח לשמוע עליו", form_send: "שלח הודעה",
+
+            // תרגום כרטיסיות גריד
+            cat_gamedev: "פיתוח משחקים", cat_webdev: "פיתוח Web", cat_aitool: "כלי AI", cat_elearning: "לומדה", cat_branding: "מיתוג", cat_inprogress: "בתהליך",
+            mm_card_title: "מג'יק אנד מאץ'", rg_card_title: "רוח גבית", mb_card_title: "MushBot", el_card_title: "צומחים ולומדים", or_card_title: "אריזות ומיתוג", ai_card_title: "פלטפורמת AI",
+
+            // Magic Match Details
+            tag_gamedev: "פיתוח משחקים", mm_title: "Magic & Match", mm_subtitle: "פותח ב-Unity ו-C# | מחולל משחקים מותאם אישית",
+            header_about_proj: "אודות הפרויקט",
+            mm_desc1: "משחק התאמה לימודי אינטראקטיבי בדו-מימד, שפותח ועוצב במלואו ב-Unity באמצעות C#.",
+            mm_desc2: "הפרויקט כולל מחולל ייחודי המאפשר למשתמשים ליצור ולהתאים אישית משחקים משלהם.",
+            mm_desc3: "כל הלוגיקה, המעברים והאנימציות פותחו באמצעות סקריפטים ב-C#.",
+            mm_header_goal: "מטרה וייחוד",
+            mm_desc4: "המשחק משלב למידה עם אינטראקטיביות, כאשר השחקנים מתאימים עננים קסומים כדי להרים בית צף חזרה לשמיים.",
+            link_figma: "קישור לאפיון ב-Figma", btn_view_live: "לצפייה בפרויקט",
+            mm_gal_1: "מחולל משחקים מותאם אישית", mm_gal_2: "סרטון פתיחה", mm_gal_3: "משחקיות ליבה", mm_gal_4: "סיום ומשוב",
+
+            // Ruach Gabit Details
+            tag_webdev: "פיתוח אתרים", rg_title: "רוח גבית", rg_subtitle: "אתר חברתי לעסקים במלחמה",
+            rg_desc1: "אתר 'רוח גבית' – פרויקט חברתי לתמיכה בעסקים עצמאיים בזמן מלחמת חרבות ברזל.",
+            rg_desc2: "המטרה הייתה ליצור פלטפורמה חברתית שמקדמת ותומכת בבעלי עסקים שנפגעו במלחמה, ומעניקה להם חשיפה וחיבור ללקוחות חדשים.",
+            rg_desc3: "האתר נבנה כולו באמצעות HTML, CSS ו-JavaScript, ומשלב עיצוב רספונסיבי עם פונקציונליות צד-לקוח.",
+            rg_header_feat: "פיצ'רים אינטראקטיביים",
+            rg_desc4: "כולל טופס הרשמה אינטראקטיבי המאפשר לבעלי עסקים להירשם לפלטפורמה – מתאים עצמו דינמית לקלט המשתמש באמצעות לוגיקת JS.",
+            link_form: "לצפייה בטופס האינטראקטיבי",
+
+            // Mushbot Details
+            tag_aidev: "פיתוח AI", mb_title: "MushBot", mb_subtitle: "זיהוי פטריות מבוסס בינה מלאכותית",
+            mb_desc1: "Mushbot מחבר בין הטבע לטכנולוגיה כדי לסייע למטיילים לזהות פטריות בצורה בטוחה.",
+            mb_desc2: "זיהוי בזמן אמת: אינטגרציה עם Kindwise API לזיהוי בוטני מדויק.",
+            mb_desc3: "בטיחות קודמת לכל: לוגיקה חכמה המספקת התראות בטיחות (ירוק/אדום) למניעת תאונות.",
+            mb_desc4: "מידע עשיר: שליפת תוכן מקומי דרך Wikipedia API.",
+            mb_desc5: "חווית משתמש דינמית: מחולל מתכונים אוטומטי לפטריות מאכל.",
+            header_tools: "כלים וטכנולוגיות",
+            mb_desc6: "נבנה ב-HTML, CSS, JS. שילוב כלי AI ו-Web כולל Kindwise API, ml5.js, Gemini ו-Suno AI.",
+
+            // E-Learning Details
+            tag_instdesign: "פיתוח הדרכה", el_title: "צומחים ומטפלים", el_subtitle: "לומדה אינטראקטיבית לילדים",
+            el_desc1: "לומדה זו תוכננה במיוחד לילדים צעירים כדי להציג את שלושת התנאים ההכרחיים לצמיחת צמחים: אדמה, מים ושמש.",
+            el_desc2: "חווית הלמידה היא אינטואיטיבית וחוקרת, ומאפשרת לילדים להיות מעורבים בתוכן במקום לצרוך אותו פסיבית. דרך אנימציות ומשוב פשוט, הלומדים מגלים כל תנאי ומתקדמים למבדק ידע.",
+            header_design_tech: "עיצוב וטכנולוגיה",
+            el_desc3: "כל האלמנטים הוויזואליים – איורים ואייקונים – נוצרו ב-Adobe Illustrator בסגנון וקטורי נקי ומותאם גיל.",
+            el_desc4: "הלומדה פותחה ב-Articulate Storyline 360, תוך שילוב עקרונות פיתוח הדרכה עם סיפור ויזואלי.",
+
+            // Oreo Details
+            tag_branding: "זהות מותגית", or_title: "מיתוג מחדש - Oreo", or_subtitle: "זהות ויזואלית ועיצוב אריזה",
+            or_desc1: "פרויקט זה מדמיין מחדש את עוגיית האוראו הקלאסית דרך תהליך מיתוג מחדש יצירתי בהשראת עקרונות חווית משתמש.",
+            or_desc2: "המטרה הייתה לעצב זהות ויזואלית רעננה ששומרת על האופי השובב של המותג, אך מעניקה לו מראה מודרני, אחיד ומרגש יותר.",
+            header_design_process: "תהליך העיצוב",
+            or_desc3: "הקונספט כולו פותח מאפס – מלוחות השראה וצבעוניות ועד איורים וקטוריים, קומפוזיציה ועיצוב האריזה.",
+            or_desc4: "כל האלמנטים נוצרו ב-Illustrator לפי סטנדרטים של דפוס ואריזה, כולל חזית, גב וצדדים עם מידע תזונתי וברקודים.",
+            or_desc5: "הפרויקט מפגין חשיבה אסטרטגית, סיפור מותגי ותשומת לב לפרטים המחברים בין רגש לחווית המוצר.",
+
+            // AI Platform Details
+            tag_inprogress: "בתהליך, מערכת בינה מלאכותית", ai_title: "פלטפורמת פיתוח הדרכה מבוססת AI", ai_subtitle: "מערכת מרובת-סוכנים ואוטומציה",
+            ai_desc1: "תכנון מערכת AI מרובת-סוכנים (Multi-Agent) התומכת ומבצעת אוטומציה לתהליכי פיתוח הדרכה המבוססים על מודל ADDIE ועקרונות Human-in-the-Loop.",
+            header_dev_focus: "מיקוד הפיתוח",
+            ai_list1: "הגדרת ארכיטקטורת המערכת ותזמור הסוכנים.",
+            ai_list2: "יצירת תרשימי זרימה לשיתוף פעולה בין אדם לבינה מלאכותית.",
+            ai_list3: "מחקר משתמשים לאופטימיזציה של האינטראקציה.",
+            btn_progress: "נמצא כרגע בפיתוח",
+            ai_arch_title: "ארכיטקטורת מערכת", ai_arch_desc: "ויזואליזציות ותרשימים לתזמור הסוכנים נמצאים כרגע בשלבי עיצוב."
+        }
+    };
+
+    const langToggleBtn = document.getElementById('lang-toggle');
+    const langText = document.getElementById('lang-text');
+    let currentLang = 'en'; 
+
+    langToggleBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'he' : 'en';
+        updateLanguage(currentLang);
+    });
+
+    function updateLanguage(lang) {
+        if (lang === 'he') {
+            document.body.classList.add('rtl');
+            document.documentElement.setAttribute('lang', 'he');
+            langText.innerText = "HE"; // מציג HE כשהאתר בעברית
+        } else {
+            document.body.classList.remove('rtl');
+            document.documentElement.setAttribute('lang', 'en');
+            langText.innerText = "EN"; // מציג EN כשהאתר באנגלית
+        }
+
+        const elements = document.querySelectorAll('[data-lang]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-lang');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+/* =========================================
+   1. IMPORTS & VARIABLES
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    /* --- פלטת צבעים נבחרת: Cool Blue/Grey Tech --- */
+    --col-slate: #7296A4;       /* כחול-אפור כהה */
+    --col-steel: #9EBECB;       /* תכלת פלדה */
+    --col-cloud: #CDDEE5;       /* תכלת מעונן */
+    --col-ice: #E6F0F2;         /* רקע כחלחל בהיר */
+    --col-mist: #EFEFEF;        /* אפור בהיר */
+
+    /* צבעי טקסט */
+    --text-dark: #2D2E4E;
+    --text-muted: #647D8C;
+
+    /* גרדיינט ראשי */
+    --primary-gradient: linear-gradient(135deg, var(--col-steel) 0%, var(--col-slate) 100%);
+    
+    /* הגדרות זכוכית */
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.8);
+    --glass-shadow: 0 8px 32px 0 rgba(114, 150, 164, 0.1);
+}
+
+/* =========================================
+   2. GLOBAL STYLES & ANIMATED BACKGROUND
+   ========================================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--col-mist);
+}
+
+.background-gradient {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: var(--col-mist);
+    background: linear-gradient(to bottom, #fcfcfc, var(--col-ice));
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.6;
+    animation: float 14s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+    top: -10%; left: -10%; width: 55vw; height: 55vw;
+    background: var(--col-cloud);
+    border-radius: 40% 50% 30% 40%;
+}
+
+.blob-2 {
+    bottom: -10%; right: -10%; width: 45vw; height: 45vw;
+    background: var(--col-steel);
+    border-radius: 60% 40% 50% 30%;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    top: 30%; left: 30%; width: 30vw; height: 30vw;
+    background: var(--col-ice);
+    background: #D9E6EB;
+    border-radius: 30% 50% 40% 60%;
+    animation-duration: 20s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(30px, 50px) rotate(10deg); }
+}
+
+.text-dark-blue { color: var(--text-dark) !important; }
+.text-gradient-main {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* =========================================
+   3. NAVBAR
+   ========================================= */
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 15px 0;
+    transition: 0.3s;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--text-dark) !important;
+    border: 2px solid white !important;
+    background: rgba(255,255,255,0.6);
+    width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.nav-link:hover {
+    color: var(--col-slate) !important;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding-top: 80px;
+    position: relative;
+}
+
+h1.display-3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(255,255,255,0.8);
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: var(--text-muted) !important;
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+.btn-glass {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 12px 30px; border-radius: 50px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid white;
+    color: var(--text-dark);
+    font-weight: 600; text-decoration: none;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.btn-glass:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(114, 150, 164, 0.25);
+    color: var(--col-slate);
+}
+
+.btn-glass-primary {
+    background: var(--primary-gradient);
+    color: white !important;
+    border: none;
+}
+.btn-glass-primary:hover {
+    background: linear-gradient(135deg, var(--col-slate) 0%, var(--col-steel) 100%);
+    color: white !important;
+    box-shadow: 0 8px 25px rgba(114, 150, 164, 0.4);
+}
+
+#myCanvasContainer { z-index: 5; }
+#tags ul li a { color: #444 !important; font-weight: 600; }
+
+/* =========================================
+   5. ABOUT / CARDS
+   ========================================= */
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.profile-circle {
+    width: 110px; height: 110px; border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; font-size: 2.2rem;
+    color: var(--col-slate);
+    border: 2px solid white;
+    margin: 0 auto 20px;
+}
+
+.glass-inner {
+    background: rgba(255,255,255,0.6);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.9);
+    transition: 0.3s;
+}
+
+.competency-card {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.competency-card:hover {
+    background: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(114, 150, 164, 0.15);
+}
+
+.competency-icon {
+    width: 50px; height: 50px; margin: 0 auto 10px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--col-cloud) 0%, var(--col-steel) 100%);
+    color: white; font-size: 1.2rem;
+}
+
+/* =========================================
+   6. PROJECTS GRID (עם התיקונים המבוקשים)
+   ========================================= */
+
+.projects-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 3rem; }
+.title-separator { width: 60px; height: 4px; background: var(--primary-gradient); margin: 20px auto; border-radius: 10px; }
+
+.project-card-wrapper { cursor: pointer; }
+
+.glass-square-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 2rem 1.5rem;
+    min-height: 240px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.project-card-wrapper:hover .glass-square-card {
+    transform: translateY(-10px);
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(114, 150, 164, 0.2);
+    border-color: white;
+}
+
+/* המיכל העגול החיצוני */
+.project-circle-img {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50%;
+    
+    /* הגדרה קריטית כדי שהמסגרת לא תשנה את הגודל */
+    box-sizing: border-box !important; 
+    
+    background-size: cover !important; 
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    
+    position: relative; 
+    overflow: hidden;
+    margin: 0 auto 15px;
+    
+    box-shadow: 0 8px 20px rgba(114, 150, 164, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.8); /* המסגרת */
+    transition: transform 0.3s ease;
+    background-color: white;
+    z-index: 1; /* סדר שכבות בסיסי */
+}
+
+.project-card-wrapper:hover .project-circle-img {
+    transform: scale(1.05);
+}
+
+/* שכבת הכיסוי בהובר */
+.circle-overlay {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100% !important;  /* רוחב מלא */
+    height: 100% !important; /* גובה מלא */
+    border-radius: 50%;      /* התאמה מושלמת לעיגול */
+    
+    /* צבע רקע - לבן מלא שמסתיר את התמונה */
+    background: #ffffff;
+    
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    color: var(--text-dark);
+    text-align: center; 
+    padding: 0 !important; /* ביטול ריפוד כדי שיגיע לקצה */
+    z-index: 10; /* מוודא שזה מעל התמונה */
+}
+.project-card-wrapper:hover .circle-overlay { opacity: 0.85; }
+
+.circle-overlay img { max-width: 40px; height: auto; margin-bottom: 0px; }
+
+/* 2. עיצוב הטקסט: שורה אחת וקטן יותר */
+/* הגדרה ספציפית לכותרת בתוך העיגול */
+.circle-overlay h6 {
+    font-size: 0.6rem !important; /* גודל פונט קטן ועדין */
+    white-space: nowrap !important; /* מכריח שורה אחת בלבד */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    overflow: hidden; /* מונע גלישה אם הטקסט ארוך מדי */
+    text-overflow: ellipsis; /* מוסיף ... אם זה ארוך מדי */
+    max-width: 90%; /* שלא יידבק לקצוות */
+}
+
+/* טקסטים מתחת לעיגול */
+.project-number {
+    font-size: 1.2rem; font-weight: 700; color: var(--col-steel);
+    display: block; margin-bottom: 2px;
+}
+.project-card-wrapper:hover .project-number { color: var(--text-dark); transition: 0.3s; }
+
+.project-cat {
+    font-size: 0.9rem; color: var(--text-muted); font-weight: 500;
+}
+
+/* =========================================
+   9. EDITORIAL CONTACT SECTION (Fixed & Animated Header)
+   ========================================= */
+
+.editorial-contact-section {
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; 
+    min-height: 100vh; /* גובה מלא למראה מרשים */
+    display: flex;
+    align-items: center; /* מירכוז אנכי */
+}
+
+.big-contact-bg-text {
+    position: absolute;
+    top: 10%; /* קצת יותר למעלה */
+    left: -5%; /* מתחיל טיפה בחוץ, לא לגמרי */
+    
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 25vw;
+    line-height: 0.8;
+    white-space: nowrap;
+    
+    /* תיקון צבע: טיפה יותר כהה כדי שיראו אותו */
+    color: rgba(45, 52, 54, 0.05); 
+    
+    z-index: 1; /* מעל לרקע הכללי, מתחת לטופס */
+    pointer-events: none;
+    
+    /* האנימציה */
+    transform: translateX(-100px); /* התחלה קרובה יותר */
+    opacity: 0; /* מתחיל שקוף */
+    transition: all 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* המחלקה שה-JS מוסיף - מפעילה את הכניסה */
+.big-contact-bg-text.active {
+    transform: translateX(0); /* זז למקום */
+    opacity: 1; /* נהיה גלוי */
+}
+
+/* --- תוכן הטופס --- */
+.contact-content {
+    position: relative;
+    z-index: 2; /* מעל הכותרת */
+}
+
+/* --- אייקונים ופרטים --- */
+.icon-box {
+    width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+    color: var(--col-slate);
+    box-shadow: 0 4px 15px rgba(114, 150, 164, 0.15);
+    transition: 0.3s;
+}
+.contact-row:hover .icon-box {
+    transform: scale(1.1);
+    background: #fff;
+}
+
+.detail-label {
+    font-weight: 700; margin-bottom: 2px;
+    color: var(--col-slate); text-transform: uppercase;
+    font-size: 0.75rem; letter-spacing: 1px;
+}
+
+.detail-value {
+    font-size: 1.1rem; color: var(--text-dark);
+    text-decoration: none; font-weight: 500; transition: color 0.3s;
+}
+.detail-value:hover { color: var(--col-slate); }
+
+/* --- כפתורים --- */
+.pill-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 12px 35px; border-radius: 50px;
+    border: 1px solid var(--col-steel);
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-dark);
+    font-weight: 600; font-size: 1rem;
+    transition: all 0.3s ease; cursor: pointer;
+}
+
+.pill-btn:hover, .pill-btn.active, .pill-btn.black-fill {
+    background: var(--text-dark);
+    color: #fff;
+    border-color: var(--text-dark);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dot {
+    width: 10px; height: 10px; background: var(--text-dark);
+    border-radius: 50%; border: 2px solid var(--text-dark);
+    transition: 0.3s;
+}
+.dot.empty { background: transparent; }
+.pill-btn:hover .dot, .pill-btn.active .dot, .dot.white {
+    background: #fff; border-color: #fff;
+}
+
+/* --- טופס מינימליסטי --- */
+.input-group-minimal { position: relative; padding-top: 25px; }
+
+.input-minimal {
+    width: 100%; background: transparent; border: none;
+    border-bottom: 1px solid var(--col-slate);
+    padding: 10px 0; font-size: 1.1rem; color: var(--text-dark);
+    outline: none; border-radius: 0; transition: border-color 0.3s;
+}
+
+.input-minimal:focus { border-bottom: 2px solid var(--text-dark); }
+
+.input-group-minimal label {
+    position: absolute; top: 10px; left: 0; font-size: 1.1rem;
+    color: var(--text-muted); pointer-events: none; transition: 0.3s ease all;
+}
+
+.input-minimal:focus ~ label, .input-minimal:not(:placeholder-shown) ~ label {
+    top: -5px; font-size: 0.8rem; color: var(--col-slate); font-weight: 700;
+}
+
+/* --- אנימציות כלליות לתוכן --- */
+.fade-up { opacity: 1; transform: translateY(0); }
+html.js-loaded .fade-up { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
+html.js-loaded .fade-up.active { opacity: 1; transform: translateY(0); }
+.delay-200 { transition-delay: 0.2s; }
+
+.delay-200 { transition-delay: 0.2s; }
+/* =========================================
+   8. MODALS / DETAILS
+   ========================================= */
+
+.project-details-overlay {
+    position: fixed !important;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(45, 46, 78, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; transition: opacity 0.4s ease;
+}
+.project-details-overlay.active { opacity: 1; }
+
+.project-details-content {
+    width: 90%; max-width: 1200px; height: 85vh;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transform: scale(0.95); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+}
+.project-details-content.active-content { transform: scale(1); }
+
+.close-project-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--col-mist);
+    border: none; cursor: pointer; z-index: 100;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-dark);
+    transition: 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.close-project-btn:hover {
+    background: #2A384C; color: white; transform: rotate(90deg);
+}
+
+.content-side {
+    background: #ffffff;
+    padding: 3rem !important;
+    overflow-y: auto;
+    height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--col-steel) var(--col-mist);
+}
+
+.content-side::-webkit-scrollbar { width: 6px; }
+.content-side::-webkit-scrollbar-track { background: var(--col-mist); }
+.content-side::-webkit-scrollbar-thumb { background-color: var(--col-steel); border-radius: 10px; }
+
+.image-side {
+    background: linear-gradient(135deg, #fdfbfb 0%, var(--col-ice) 100%);
+    height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-details-content h2 { font-size: 2.5rem; letter-spacing: -1px; margin-bottom: 0.5rem; }
+.description-text h5 { margin-top: 1.5rem; font-weight: 600; color: var(--text-dark); }
+.description-text p { font-size: 0.95rem; color: #666; line-height: 1.7; margin-bottom: 1rem; }
+
+.tech-tag {
+    display: inline-block; padding: 6px 14px; margin: 0 5px 5px 0;
+    border-radius: 8px; font-size: 0.8rem; font-weight: 600;
+    background: rgba(158, 190, 203, 0.15); color: #506775;
+    border: 1px solid rgba(158, 190, 203, 0.3);
+}
+
+/* Animations */
+.reveal-section, .reveal-grid { opacity: 0; transform: translateY(30px); transition: 1s; }
+.reveal-section.active, .reveal-grid.active { opacity: 1; transform: translateY(0); }
+.stagger-item { opacity: 0; transform: translateY(30px) scale(0.9); transition: all 0.6s; }
+.reveal-grid.active .stagger-item { opacity: 1; transform: translateY(0) scale(1); }
+/* === אנימציית כניסה מפוצלת (Split Reveal) === */
+
+/* צד שמאל - מגיע משמאל */
+.slide-from-left {
+    opacity: 0;
+    transform: translateX(-100px); /* מתחיל 100 פיקסלים שמאלה */
+    filter: blur(10px); /* מתחיל מטושטש */
+    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); /* תנועה חלקה מאוד */
+}
+
+/* המצב הפעיל (אחרי שה-JS מזהה גלילה) */
+.slide-from-left.active {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+/* צד ימין - מגיע מימין */
+.slide-from-right {
+    opacity: 0;
+    transform: translateX(100px); /* מתחיל 100 פיקסלים ימינה */
+    filter: blur(10px);
+    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition-delay: 0.2s; /* דיליי קטן כדי שייכנס אחרי השמאלי */
+}
+
+.slide-from-right.active {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+/* ==================================================
+       תיקון גורף למובייל - יישור לשמאל וסדר רגיל
+       ================================================== */
+    @media (max-width: 991px) {
+        
+        /* 1. מכריח את כל הטקסטים והכותרות להתיישר לשמאל */
+        body, section, .container, .row, .col-lg-5, .col-lg-6, 
+        h1, h2, h3, h4, h5, p, .projects-header {
+            text-align: left !important;
+        }
+
+        /* 2. מבטל מצב של "היפוך" שורות - שומר על הסדר של המחשב */
+        .row {
+            flex-direction: column !important;
+        }
+        
+        /* תיקון ספציפי: מחזיר את הכפתורים (בטופס וב-Hero) לשורה אחת אם יש מקום */
+        .d-flex:not(.flex-column) {
+            justify-content: flex-start !important;
+        }
+
+        /* 3. טיפול ספציפי בכרטיסים שלא יימתחו מוזר */
+        .glass-card, .glass-square-card {
+            align-items: flex-start !important; /* מיישר את התוכן בתוך הכרטיס לשמאל */
+            text-align: left !important;
+        }
+
+        /* 4. שומר על העיגול של הפרויקטים באמצע הכרטיס שלו, אבל הטקסט למטה לשמאל */
+        .project-card-wrapper .glass-square-card {
+            align-items: center !important; /* חריג: בפרויקטים התמונה באמצע */
+        }
+        
+        /* החזרת הריווח לכותרות */
+        .title-separator {
+            margin: 20px 0 !important; /* הקו מתחת לכותרת יזוז לשמאל */
+        }
+    }
+    /* === תיקון גלילה (Scroll Offset) === */
+/* זה גורם לגלילה לעצור 100 פיקסלים לפני הסקשן, כדי שהתפריט לא יסתיר את הכותרת */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section, header, #about, #projects-section, #contact {
+    scroll-margin-top: 100px; /* זה הקסם! תוכלי לשנות את המספר לפי גובה התפריט שלך */
+}
